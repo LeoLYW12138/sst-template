@@ -1,0 +1,35 @@
+{
+  "name": "sst-template",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "sst start",
+    "build": "sst build",
+    "deploy": "sst deploy",
+    "remove": "sst remove",
+    "console": "sst console",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "codegen": "graphql-codegen --config ./codegen.yml"
+  },
+  "devDependencies": {
+    "@graphql-codegen/cli": "^2.11.2",
+    "@graphql-codegen/typescript": "^2.7.2",
+    "@graphql-codegen/typescript-operations": "^2.5.2",
+    "@graphql-codegen/typescript-react-apollo": "^3.3.2",
+    "@serverless-stack/cli": "^1.6.4",
+    "@serverless-stack/resources": "^1.6.4",
+    "@tsconfig/node16": "^1.0.3",
+    "aws-cdk-lib": "2.32.0",
+    "typescript": "^4.7.4",
+    "vitest": "^0.19.1"
+  },
+  "workspaces": [
+    "services",
+    "graphql",
+    "frontend"
+  ],
+  "overrides": {
+    "graphql": "16.5.0"
+  }
+}

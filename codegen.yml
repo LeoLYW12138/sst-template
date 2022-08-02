@@ -1,0 +1,13 @@
+schema: ./services/functions/graphql/*.ts
+overwrite: true
+generates:
+  ./services/functions/types.ts:
+    plugins:
+      - typescript
+      - typescript-operations
+  ./frontend/api/types.ts:
+    documents: ./frontend/api/graphql/*.graphql
+    plugins:
+      - typescript
+      - typescript-operations
+      - typescript-react-apollo
